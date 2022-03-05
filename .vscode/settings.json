@@ -1,0 +1,7 @@
+{
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "Dart-Code.dart-code"
+}
