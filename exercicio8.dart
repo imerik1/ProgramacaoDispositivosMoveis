@@ -5,5 +5,8 @@ void main() {
   double peso = 80.0;
   double altura = 1.83;
   double imc = peso / (altura * altura);
-  print('O seu IMC é $imc');
+  if (imc > 18.6 && imc < 24.9) {
+    return print('Seu IMC é ideal, o valor é $imc');
+  }
+  print('Seu IMC não é ideal, o valor é $imc');
 }
