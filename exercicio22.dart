@@ -204,17 +204,17 @@ class Poupanca extends Conta {
     if (v < 0.01) return investir();
     saldo += v;
     print('Investimento realizado com sucesso.');
-    transacoes.add(Transacao("INVT CONTA-POUPANÇA", '$v +'));
+    transacoes.add(Transacao("INV CONTA-POUPANÇA", '$v +'));
   }
 
   void mostrarOpcoes(Banco banco) {
     bool sair = false;
     while (sair == false) {
       print('=== BEM VINDO A SUA CONTA-POUPANÇA ===');
-      print('Total investimento: R\$ $saldo');
+      print('Total investido: R\$ $saldo');
       print('1- Resgatar');
       print('2- Investir');
-      print('3- Investir');
+      print('3- Extrato');
       print('4- Sair');
       print('Digite uma das opções existentes:');
       String opcao = stdin.readLineSync() ?? "";
