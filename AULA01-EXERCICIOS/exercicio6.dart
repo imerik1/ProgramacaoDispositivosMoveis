@@ -3,12 +3,16 @@
 // pagamento da somatória destes valores. Calcular e
 //exibir o troco que deverá ser devolvido.
 
+import 'utils/validarInputNumber.dart';
+
 void main() {
-  List<double> produtos = [2.0, 3.0, 15.0, 6.0, 8.0];
-  double valor = produtos.reduce((value, element) => value + element);
-  double pagamento = 47.00 - valor;
+  final List<double> produtos = List.generate(
+      5, (int index) => validarInputNumber("Digite o valor do produto", null));
+  final double valor = produtos.reduce((value, element) => value + element);
+  final double pagamento =
+      validarInputNumber("Digite o valor que vai pagar", null) - valor;
   if (pagamento < 0) {
     return print('O comprador não pagou o valor inteiro.');
   }
-  print('O troco é de $pagamento');
+  print('O troco é de R\$ $pagamento');
 }

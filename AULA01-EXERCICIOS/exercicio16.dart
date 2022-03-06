@@ -7,12 +7,14 @@
 // se o valor for 1 retorna 2;
 // somar o numero anterior com o proximo numero impar
 
+import 'utils/validarInputNumber.dart';
+
 int def(int v, int i) {
   return v == 1 ? 2 : def(v - 1, i - 2) + i;
 }
 
 void main() {
-  int n = 10;
+  final double n = validarInputNumber("Digite um valor", null);
   if (n < 0 || n > 100) {
     print('Valor invalido.');
     print('Digite novamente.');

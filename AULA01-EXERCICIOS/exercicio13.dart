@@ -4,9 +4,13 @@
 //ser maior que o primeiro (A). Exibir a tabuada do valor digitado,
 //no intervalo decrescente, ou seja, a tabuada de X no intervalo de B para A.
 
+import 'utils/validarInputNumber.dart';
+
 void main() {
-  double x = 12.0;
-  int f = 15;
+  final double x =
+      validarInputNumber("Digite o valor a ser multiplicado", null);
+  final double f =
+      validarInputNumber("Digite até qual número deve ser multiplicado", null);
   if (f < x) {
     return print(
         'O intervalo é inferior ao valor que deverá ser multiplicado.');

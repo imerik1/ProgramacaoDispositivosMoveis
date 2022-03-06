@@ -3,13 +3,33 @@
 //para a idade. Após a digitação dos dados, exibir os dados
 //(nome, sexo e idade) de todas as pessoas do sexo feminino.
 
+import 'utils/validarInputNumber.dart';
+import 'utils/validarInputString.dart';
+
+String validarSexo() {
+  String sexo =
+      validarInputString("Digite seu sexo (F ou M)", "").toUpperCase();
+  while (0 == 0) {
+    if (sexo != "M" || sexo != "F") {
+      validarSexo();
+    }
+    break;
+  }
+  return sexo;
+}
+
+class Pessoa {
+  String nome;
+  double idade;
+  String sexo;
+  Pessoa(this.nome, this.idade, this.sexo) {}
+}
+
 void main() {
-  var person = [
-    {"name": 'Erik', "age": 30, "sexo": "M"},
-    {"name": 'Maithe', "age": 20, "sexo": "F"},
-    {"name": 'João', "age": 19, "sexo": "M"},
-    {"name": 'Pedro', "age": 18, "sexo": "M"},
-    {"name": 'Vanessa', "age": 22, "sexo": "F"},
-  ];
-  person.forEach((p) => print(p));
+  final List<Pessoa> pessoas = List.generate(
+      5,
+      (index) => Pessoa(validarInputString("Digite seu nome", null),
+          validarInputNumber("Digite sua idade", null), validarSexo()));
+  pessoas.forEach((p) =>
+      print('Nome: ${p.nome} e sua idade é ${p.idade.toStringAsPrecision(0)}'));
 }

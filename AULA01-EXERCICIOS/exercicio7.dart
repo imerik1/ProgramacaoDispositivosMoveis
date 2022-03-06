@@ -3,9 +3,11 @@
 //exibir a mensagem “Terreno grande”, caso contrário,
 //exibir a mensagem “Terreno pequeno”.
 
+import 'utils/validarInputNumber.dart';
+
 void main() {
-  double base = 5.0;
-  double altura = 2.0;
+  double base = validarInputNumber("Digite a base do retângulo", null);
+  double altura = validarInputNumber("Digite a altura do retângulo", null);
   double area = (base * altura) / 2;
   if (area > 100) {
     return print('Terreno grande');

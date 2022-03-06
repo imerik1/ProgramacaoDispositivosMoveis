@@ -6,7 +6,7 @@ int berg(int n) {
 }
 
 void main() {
-  double f = 20;
+  final double f = 20;
   for (int i = 1; i <= f; i++) {
     print(berg(i));
   }

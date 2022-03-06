@@ -6,7 +6,7 @@ int fibo(int n) {
 }
 
 void main() {
-  double f = 30;
+  final double f = 30;
   for (int i = 0; i < f; i++) {
     print(fibo(i));
   }
