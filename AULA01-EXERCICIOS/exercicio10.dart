@@ -27,11 +27,14 @@ void main() {
   }
   final String sexo = validarSexo();
   double imc = peso / pow(altura, 2);
-  if (imc > 20 && imc < 24.9 && sexo == "M") {
-    return print('Seu IMC é ideal, o valor é $imc');
+	if (sexo == "M") {
+    if (imc < 20) return print('Seu IMC está abaixo do peso, o valor é $imc');
+		if (imc >= 20 && imc < 25) return print('Seu IMC é ideal, o valor é $imc');
+		if (imc >= 25) return print('Seu IMC está acima do peso, o valor é $imc');
   }
-  if (imc > 19 && imc < 23.9 && sexo == "F") {
-    return print('Seu IMC é ideal, o valor é $imc');
+	if (sexo == "F") {
+    if (imc < 19) return print('Seu IMC está abaixo do peso, o valor é $imc');
+		if (imc >= 19 && imc < 24) return print('Seu IMC é ideal, o valor é $imc');
+		if (imc >= 24) return print('Seu IMC está acima do peso, o valor é $imc');
   }
-  print('Seu IMC não é ideal, o valor é $imc');
 }
