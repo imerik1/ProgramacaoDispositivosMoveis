@@ -192,7 +192,12 @@ class Poupanca extends Conta {
     if (v < 0.01) return resgatar();
     if (v > saldo) return print('Você não possui saldo suficiente.');
     saldo -= v;
-    print('Resgatado com sucesso.');
+    if (cliente!.corrente != null) {
+      cliente!.corrente!.saldo += v;
+      return print('Notamos uma conta-corrente, o valor foi para a sua conta.');
+    } else {
+      print('Resgatado com sucesso em uma de nossas agências.');
+    }
     transacoes.add(Transacao("RGT CONTA-POUPANÇA", '$v -'));
   }
 
