@@ -53,14 +53,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   __containerPadding(String description) {
     return Container(
-      width: 200,
-      height: 200,
-      padding: const EdgeInsets.all(10.0),
-      child: Center(
-          child: Text(
-        description,
-        style: const TextStyle(color: Colors.red, fontSize: 20),
-      )),
+      padding: const EdgeInsets.all(10),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.network(
+                "https://img.olx.com.br/thumbs256x256/83/835240622809777.jpg"),
+            Center(
+                child: Text(
+              description,
+              style: const TextStyle(color: Colors.red, fontSize: 20),
+            ))
+          ]),
     );
   }
 }
