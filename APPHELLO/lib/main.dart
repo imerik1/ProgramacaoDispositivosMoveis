@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
         color: const Color.fromARGB(255, 194, 124, 206),
         child: const Center(
           child: Text(
-            'Hello turmaa',
+            'Erik Santana, tenho 20 anos, sou desenvolvedor senior e já fiz tanto projeto que não cabe aqui, um dos mais importantes que já fiz é uma IA para o Banco Itaú.',
             style: TextStyle(
                 fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
           ),
